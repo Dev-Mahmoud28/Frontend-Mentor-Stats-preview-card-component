@@ -16,82 +16,92 @@ p{
   font-family: 'Lexend Deca', sans-serif;
   font-weight: 400;
 }
-section{
+.container{
   display: flex;
   justify-content: center;
-  width: 800px;
+  width: 950px;
   overflow: hidden;
   border-radius: 6px;
 }
 @media(max-width: 767px){
-  section{
+  .container{
     flex-direction: column;
     width: 90%;
     margin: 30px 0;
   }
 }
-section article.text{
-  padding: 30px;
+.container .text{
+  padding: 50px;
   background-color: hsl(244, 38%, 16%);
   color: white;
 }
 @media(max-width: 767px){
-  section article.text{
+  .container .text{
     order: 2;
     text-align: center;
   }
 }
-section article.text h1{
-  font-size: 30px;
+.container .text h1{
+  font-size: 35px;
   color: hsl(0, 0%, 100%);
   font-family: 'Inter', sans-serif;
   font-weight: 700;
+  width: 90%;
 }
-section article.text h1 span{
+.container .text h1 span{
   color: hsl(277, 64%, 61%);
 }
-section article.text .describtion{
+.container .text .describtion{
   margin-top: 20px;
   margin-bottom: 20px;
   color: hsla(0, 0%, 100%, 0.75);
-  width: 100%;
-  line-height: 1.7;
+  width: 85%;
+  line-height: 1.4;
 }
-section article.text .foot{
+@media(max-width: 767px){
+  .container .text h1{
+    width: 100%;
+    font-size: 32px;
+  }
+  .container .text .describtion{
+    width: 100%;
+  }
+}
+.container .text .foot{
   display: flex;
-  justify-content: space-between;
+  gap: 70px;
   align-items: center;
   margin-top: 50px;
 }
 @media(max-width: 767px){
-  section article.text .foot{
+  .container .text .foot{
     flex-direction: column;
     text-align: center;
   }
 }
-section article.text .foot h4{
+.container .text .foot h4{
   color: hsl(0, 0%, 100%);
   font-size: 20px;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   margin-bottom: 10px;
 }
-section article.text .foot p{
+.container .text .foot p{
   color: hsla(0, 0%, 100%, 0.75);
   font-size: 11px;
   text-transform: uppercase;
 }
 @media(max-width: 767px){
-  section article.text .foot .stat{
+  .container .text .foot .stat{
     margin-bottom: 20px;
   }
 }
-section article.image{
+.container .image{
   width: 100%;
   position: relative;
   display: flex;
 }
-section article.image::before{
+.container .image::before{
   content: "";
   position: absolute;
   top: 0;
@@ -100,7 +110,7 @@ section article.image::before{
   height: 100%;
   background-color: hsl(277deg 100% 31% / 60%);
 }
-section article.image img{
+.container .image img{
   max-width: 100%;
   width: 100%;
   height: 100%;
